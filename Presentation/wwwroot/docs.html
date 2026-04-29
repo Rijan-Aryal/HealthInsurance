@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance App - API Documentation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+        }
+        .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+        .back-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.3); }
+        .card {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        .card h2 {
+            color: #667eea;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .card h3 {
+            color: #2d3748;
+            font-size: 1.1rem;
+            margin: 1.2rem 0 0.5rem;
+        }
+        .endpoint {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 0.8rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .method {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: white;
+            margin-right: 0.5rem;
+        }
+        .get { background: #48bb78; }
+        .post { background: #4299e1; }
+        .put { background: #ed8936; }
+        .delete { background: #f56565; }
+        .path { font-family: 'Courier New', monospace; font-weight: 600; color: #2d3748; }
+        .desc { color: #718096; font-size: 0.9rem; margin-top: 0.3rem; }
+        .json {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin: 0.5rem 0;
+        }
+        .json .key { color: #9ae6b4; }
+        .json .string { color: #fbd38d; }
+        .json .number { color: #90cdf4; }
+        .json .bool { color: #fc8181; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        .workflow {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #edf2f7;
+            border-radius: 8px;
+        }
+        .workflow-step {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 2px solid #667eea;
+            color: #667eea;
+        }
+        .workflow-arrow {
+            font-size: 1.2rem;
+            color: #667eea;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 API Documentation</h1>
+            <p>Health Insurance Management System — Complete API Reference</p>
+            <a href="/" class="back-btn">← Back to Home</a>
+        </div>
+
+        <div class="card">
+            <h2>🏗️ Architecture Overview</h2>
+            <p>This is a Clean Architecture-based .NET 9 Web API with the following layers:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Domain</strong> — Entities, Enums</li>
+                <li><strong>Application</strong> — DTOs, Interfaces</li>
+                <li><strong>Infrastructure</strong> — EF Core, Repositories, Background Services</li>
+                <li><strong>Presentation</strong> — Controllers, Static Files</li>
+            </ul>
+            <p style="margin-top: 0.5rem;"><strong>Base URL:</strong> <code>http://localhost:5249/api</code></p>
+        </div>
+
+        <div class="card">
+            <h2>👤 Customers API</h2>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/customers</span>
+                <div class="desc">List all customers</div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/customers/{id}</span>
+                <div class="desc">Get a specific customer by ID</div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/customers</span>
+                <div class="desc">Create a new customer</div>
+                <div class="json">{
+  <span class="key">"fullName"</span>: <span class="string">"Rijan Aryal"</span>,
+  <span class="key">"email"</span>: <span class="string">"rijan@example.com"</span>,
+  <span class="key">"phone"</span>: <span class="string">"+977-98XXXXXXXX"</span>,
+  <span class="key">"address"</span>: <span class="string">"Kathmandu, Nepal"</span>,
+  <span class="key">"dateOfBirth"</span>: <span class="string">"1995-01-01T00:00:00Z"</span>,
+  <span class="key">"citizenshipNumber"</span>: <span class="string">"1234-5678-9012"</span>
+}</div>
+            </div>
+            <div class="endpoint">
+                <span class="method put">PUT</span><span class="path">/api/customers/{id}</span>
+                <div class="desc">Update a customer</div>
+            </div>
+            <div class="endpoint">
+                <span class="method delete">DELETE</span><span class="path">/api/customers/{id}</span>
+                <div class="desc">Delete a customer</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📋 Policies API</h2>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/policies</span>
+                <div class="desc">List all policies</div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/policies/{id}</span>
+                <div class="desc">Get a specific policy by ID</div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/policies</span>
+                <div class="desc">Create a new policy (starts as <strong>Draft</strong>)</div>
+                <div class="json">{
+  <span class="key">"policyNumber"</span>: <span class="string">"POL-2024-001"</span>,
+  <span class="key">"customerId"</span>: <span class="string">"guid-here"</span>,
+  <span class="key">"policyType"</span>: <span class="number">0</span>,
+  <span class="key">"coverageAmount"</span>: <span class="number">500000</span>,
+  <span class="key">"premium"</span>: <span class="number">15000</span>,
+  <span class="key">"startDate"</span>: <span class="string">"2024-01-01T00:00:00Z"</span>,
+  <span class="key">"endDate"</span>: <span class="string">"2025-01-01T00:00:00Z"</span>,
+  <span class="key">"isAutoRenewal"</span>: <span class="bool">true</span>
+}</div>
+            </div>
+            <div class="endpoint">
+                <span class="method put">PUT</span><span class="path">/api/policies/{id}</span>
+                <div class="desc">Update policy details</div>
+            </div>
+            <div class="endpoint">
+                <span class="method delete">DELETE</span><span class="path">/api/policies/{id}</span>
+                <div class="desc">Delete a policy</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔄 Policy Lifecycle API</h2>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/policies/{id}/activate</span>
+                <div class="desc">Activate a <strong>Draft</strong> policy → <strong>Active</strong>. Auto-sets StartDate & EndDate if not provided.</div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/policies/{id}/cancel</span>
+                <div class="desc">Cancel a policy → <strong>Cancelled</strong></div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/policies/{id}/expire</span>
+                <div class="desc">Manually expire an <strong>Active</strong> policy → <strong>Expired</strong></div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/policies/{id}/renew</span>
+                <div class="desc">Renew an <strong>Expired</strong> policy → Creates new <strong>Active</strong> version</div>
+                <div class="json">{
+  <span class="key">"newEndDate"</span>: <span class="string">"2026-01-01T00:00:00Z"</span>
+}</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>✏️ Policy Endorsements API</h2>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/policies/{id}/endorse</span>
+                <div class="desc">Add an endorsement to an <strong>Active</strong> policy. Automatically applies changes.</div>
+                <div class="json">{
+  <span class="key">"type"</span>: <span class="number">0</span>,
+  <span class="key">"description"</span>: <span class="string">"Increased coverage after review"</span>,
+  <span class="key">"oldValue"</span>: <span class="number">500000</span>,
+  <span class="key">"newValue"</span>: <span class="number">750000</span>,
+  <span class="key">"effectiveDate"</span>: <span class="string">"2024-06-01T00:00:00Z"</span>
+}</div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/policies/{id}/endorsements</span>
+                <div class="desc">Get all endorsements for a policy</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Policy Query API</h2>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/policies/by-status/{status}</span>
+                <div class="desc">Filter policies by status: <code>0=Draft, 1=Active, 2=Expired, 3=Cancelled</code></div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/policies/expired</span>
+                <div class="desc">List all expired policies</div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/policies/up-for-renewal?daysBeforeExpiry=7</span>
+                <div class="desc">List policies nearing expiry (default 7 days)</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📁 Claims API — Full Workflow</h2>
+            <div class="workflow">
+                <span class="workflow-step">Submitted</span>
+                <span class="workflow-arrow">→</span>
+                <span class="workflow-step">UnderReview</span>
+                <span class="workflow-arrow">→</span>
+                <span class="workflow-step">Approved</span>
+                <span class="workflow-arrow">→</span>
+                <span class="workflow-step">Paid</span>
+            </div>
+            <div class="workflow" style="margin-top: 0.5rem;">
+                <span class="workflow-step">Submitted</span>
+                <span class="workflow-arrow">→</span>
+                <span class="workflow-step" style="border-color: #f56565; color: #f56565;">Rejected</span>
+            </div>
+            <div class="workflow" style="margin-top: 0.5rem;">
+                <span class="workflow-step">UnderReview</span>
+                <span class="workflow-arrow">→</span>
+                <span class="workflow-step" style="border-color: #f56565; color: #f56565;">Rejected</span>
+            </div>
+
+            <h3>Basic CRUD</h3>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/claims</span>
+                <div class="desc">List all claims with documents and audit logs</div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/claims/{id}</span>
+                <div class="desc">Get a specific claim with full details</div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/claims</span>
+                <div class="desc">Create a new claim (starts as <strong>Submitted</strong>)</div>
+                <div class="json">{
+  <span class="key">"policyId"</span>: <span class="string">"guid-here"</span>,
+  <span class="key">"claimAmount"</span>: <span class="number">50000</span>,
+  <span class="key">"description"</span>: <span class="string">"Hospitalization claim for surgery"</span>
+}</div>
+            </div>
+            <div class="endpoint">
+                <span class="method put">PUT</span><span class="path">/api/claims/{id}</span>
+                <div class="desc">Update claim (only while <strong>Submitted</strong>)</div>
+            </div>
+            <div class="endpoint">
+                <span class="method delete">DELETE</span><span class="path">/api/claims/{id}</span>
+                <div class="desc">Delete claim (only <strong>Submitted</strong> or <strong>Rejected</strong>)</div>
+            </div>
+
+            <h3>Workflow Endpoints</h3>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/claims/{id}/submit-to-review</span>
+                <div class="desc">Move claim from <strong>Submitted</strong> → <strong>UnderReview</strong></div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/claims/{id}/review</span>
+                <div class="desc">Review claim: Approve or Reject. From <strong>UnderReview</strong> → <strong>Approved</strong> or <strong>Rejected</strong></div>
+                <div class="json">{
+  <span class="key">"action"</span>: <span class="string">"Approve"</span>,
+  <span class="key">"approvedAmount"</span>: <span class="number">45000</span>,
+  <span class="key">"reviewNotes"</span>: <span class="string">"Approved with 10% deduction"</span>,
+  <span class="key">"assignedAdjuster"</span>: <span class="string">"John Smith"</span>,
+  <span class="key">"performedBy"</span>: <span class="string">"Manager001"</span>
+}</div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/claims/{id}/pay</span>
+                <div class="desc">Pay an <strong>Approved</strong> claim → <strong>Paid</strong></div>
+                <div class="json">{
+  <span class="key">"paidBy"</span>: <span class="string">"FinanceDept"</span>,
+  <span class="key">"notes"</span>: <span class="string">"Bank transfer completed"</span>
+}</div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/claims/{id}/assign-adjuster</span>
+                <div class="desc">Assign an adjuster to a claim</div>
+                <div class="json">{
+  <span class="key">"adjusterName"</span>: <span class="string">"Jane Doe"</span>,
+  <span class="key">"adjusterId"</span>: <span class="string">"ADJ-123"</span>,
+  <span class="key">"notes"</span>: <span class="string">"Assigned for detailed investigation"</span>
+}</div>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/claims/{id}/flag</span>
+                <div class="desc">Flag a claim for manual/fraud review</div>
+                <div class="json"><span class="string">"Suspicious activity detected - verify hospital records"</span></div>
+            </div>
+
+            <h3>Document Upload</h3>
+            <div class="endpoint">
+                <span class="method post">POST</span><span class="path">/api/claims/{id}/documents</span>
+                <div class="desc">Upload a document (proof, bill, medical report, etc.) — <strong>multipart/form-data</strong></div>
+                <div class="desc">Form fields: <code>file</code> (IFormFile), <code>documentType</code> (Proof/Bill/MedicalReport/PoliceReport/Other), <code>description</code> (optional)</div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/claims/{id}/documents</span>
+                <div class="desc">List all documents for a claim</div>
+            </div>
+
+            <h3>Audit Logs</h3>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/claims/{id}/audit-logs</span>
+                <div class="desc">Get complete audit trail for a claim (who changed what and when)</div>
+            </div>
+
+            <h3>Query</h3>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/claims/by-status/{status}</span>
+                <div class="desc">Filter claims by status: <code>0=Submitted, 1=UnderReview, 2=Approved, 3=Rejected, 4=Paid</code></div>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span><span class="path">/api/claims/policy/{policyId}</span>
+                <div class="desc">Get all claims for a specific policy</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🗂️ Enums Reference</h2>
+            <h3>PolicyType</h3>
+            <table>
+                <tr><th>Value</th><th>Name</th></tr>
+                <tr><td>0</td><td>Health</td></tr>
+                <tr><td>1</td><td>Life</td></tr>
+                <tr><td>2</td><td>Motor</td></tr>
+                <tr><td>3</td><td>Property</td></tr>
+                <tr><td>4</td><td>Travel</td></tr>
+            </table>
+            <h3>PolicyStatus</h3>
+            <table>
+                <tr><th>Value</th><th>Name</th></tr>
+                <tr><td>0</td><td>Draft</td></tr>
+                <tr><td>1</td><td>Active</td></tr>
+                <tr><td>2</td><td>Expired</td></tr>
+                <tr><td>3</td><td>Cancelled</td></tr>
+            </table>
+            <h3>EndorsementType</h3>
+            <table>
+                <tr><th>Value</th><th>Name</th></tr>
+                <tr><td>0</td><td>CoverageIncrease</td></tr>
+                <tr><td>1</td><td>CoverageDecrease</td></tr>
+                <tr><td>2</td><td>PremiumIncrease</td></tr>
+                <tr><td>3</td><td>PremiumDecrease</td></tr>
+                <tr><td>4</td><td>TermExtension</td></tr>
+                <tr><td>5</td><td>Other</td></tr>
+            </table>
+            <h3>ClaimStatus</h3>
+            <table>
+                <tr><th>Value</th><th>Name</th></tr>
+                <tr><td>0</td><td>Submitted</td></tr>
+                <tr><td>1</td><td>UnderReview</td></tr>
+                <tr><td>2</td><td>Approved</td></tr>
+                <tr><td>3</td><td>Rejected</td></tr>
+                <tr><td>4</td><td>Paid</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🤖 Background Services</h2>
+            <h3>PolicyLifecycleBackgroundService</h3>
+            <p>Runs every 24 hours:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Auto-Expiration</strong> — Policies past their EndDate are automatically marked Expired</li>
+                <li><strong>Renewal Reminders</strong> — Reminders sent 7 days before expiry (tracked in RenewalReminders table)</li>
+                <li><strong>Auto-Renewal</strong> — Expired policies with <code>IsAutoRenewal=true</code> are renewed automatically</li>
+            </ul>
+            <h3>ClaimProcessingBackgroundService</h3>
+            <p>Runs every 6 hours:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Auto-Validation</strong> — Submitted claims with documents are auto-moved to UnderReview after 1 hour</li>
+                <li><strong>Urgent Review Flagging</strong> — Claims UnderReview for >2 days without an adjuster are flagged</li>
+                <li><strong>Fraud Detection</strong> — High-value claims (>100,000) are automatically flagged for review</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🛠️ Tech Stack</h2>
+            <table>
+                <tr><th>Component</th><th>Technology</th></tr>
+                <tr><td>Framework</td><td>.NET 9</td></tr>
+                <tr><td>Web API</td><td>ASP.NET Core</td></tr>
+                <tr><td>ORM</td><td>Entity Framework Core 9</td></tr>
+                <tr><td>Database</td><td>SQL Server (LocalDB)</td></tr>
+                <tr><td>Architecture</td><td>Clean Architecture (Domain, Application, Infrastructure, Presentation)</td></tr>
+                <tr><td>API Docs</td><td>Swagger / OpenAPI</td></tr>
+                <tr><td>Background Jobs</td><td>.NET Hosted Services</td></tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Developed by <strong>Rijan Aryal</strong> | Health Insurance Management System</p>
+        </div>
+    </div>
+</body>
+</html>
+

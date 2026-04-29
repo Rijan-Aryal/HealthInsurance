@@ -1,0 +1,152 @@
+  Determining projects to restore...
+  Writing C:\Users\Dell\AppData\Local\Temp\tmpymjpx0.tmp
+info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+info : Adding PackageReference for package 'Serilog.Sinks.MSSqlServer' into project 'D:\Inc\Presentation\Presentation.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/index.json 941ms
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/1.2.48/1.4.113.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/1.2.48/1.4.113.json 335ms
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/1.4.118/5.1.2-dev-00196.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/1.4.118/5.1.2-dev-00196.json 279ms
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/5.1.2-dev-00199/5.4.1-dev-00338.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/5.1.2-dev-00199/5.4.1-dev-00338.json 306ms
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/5.4.1-dev-00341/6.1.0-dev-00035.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/5.4.1-dev-00341/6.1.0-dev-00035.json 429ms
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/6.1.0-dev-00036/7.0.2-dev-00102.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/6.1.0-dev-00036/7.0.2-dev-00102.json 671ms
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/7.0.2-dev-00103/9.0.4-dev-00160.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/serilog.sinks.mssqlserver/page/7.0.2-dev-00103/9.0.4-dev-00160.json 360ms
+info : Restoring packages for D:\Inc\Presentation\Presentation.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/serilog.sinks.mssqlserver/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/serilog.sinks.mssqlserver/index.json 688ms
+info :   GET https://api.nuget.org/v3-flatcontainer/serilog.sinks.mssqlserver/9.0.3/serilog.sinks.mssqlserver.9.0.3.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/serilog.sinks.mssqlserver/9.0.3/serilog.sinks.mssqlserver.9.0.3.nupkg 84ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/index.json
+info :   CACHE https://api.nuget.org/v3-flatcontainer/serilog/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/serilog/4.3.1/serilog.4.3.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.configuration.configurationmanager/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/system.configuration.configurationmanager/index.json 80ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/index.json 124ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.configuration.configurationmanager/9.0.10/system.configuration.configurationmanager.9.0.10.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/6.1.1/microsoft.data.sqlclient.6.1.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/serilog/4.3.1/serilog.4.3.1.nupkg 265ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.configuration.configurationmanager/9.0.10/system.configuration.configurationmanager.9.0.10.nupkg 174ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/6.1.1/microsoft.data.sqlclient.6.1.1.nupkg 174ms
+info :   GET https://api.nuget.org/v3-flatcontainer/azure.core/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/azure.identity/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.bcl.cryptography/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient.sni.runtime/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols.openidconnect/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.configuration.configurationmanager/9.0.4/system.configuration.configurationmanager.9.0.4.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.cryptography.pkcs/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.diagnostics.eventlog/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.cryptography.protecteddata/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/system.configuration.configurationmanager/9.0.4/system.configuration.configurationmanager.9.0.4.nupkg 79ms
+info :   OK https://api.nuget.org/v3-flatcontainer/azure.identity/index.json 108ms
+info :   OK https://api.nuget.org/v3-flatcontainer/azure.core/index.json 121ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.bcl.cryptography/index.json 125ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/index.json 139ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.bcl.cryptography/9.0.4/microsoft.bcl.cryptography.9.0.4.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/azure.identity/1.14.2/azure.identity.1.14.2.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/azure.core/1.47.1/azure.core.1.47.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.cryptography.pkcs/index.json 138ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient.sni.runtime/index.json 158ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/7.7.1/microsoft.identitymodel.jsonwebtokens.7.7.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.cryptography.pkcs/9.0.4/system.security.cryptography.pkcs.9.0.4.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient.sni.runtime/6.0.2/microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/azure.identity/1.14.2/azure.identity.1.14.2.nupkg 22ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.diagnostics.eventlog/index.json 146ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.diagnostics.eventlog/9.0.10/system.diagnostics.eventlog.9.0.10.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient.sni.runtime/6.0.2/microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg 28ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.jsonwebtokens/7.7.1/microsoft.identitymodel.jsonwebtokens.7.7.1.nupkg 43ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.cryptography.pkcs/9.0.4/system.security.cryptography.pkcs.9.0.4.nupkg 43ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols.openidconnect/index.json 212ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.cryptography.protecteddata/index.json 195ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.bcl.cryptography/9.0.4/microsoft.bcl.cryptography.9.0.4.nupkg 121ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols.openidconnect/7.7.1/microsoft.identitymodel.protocols.openidconnect.7.7.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.security.cryptography.protecteddata/9.0.10/system.security.cryptography.protecteddata.9.0.10.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/azure.core/1.47.1/azure.core.1.47.1.nupkg 150ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols.openidconnect/7.7.1/microsoft.identitymodel.protocols.openidconnect.7.7.1.nupkg 78ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.diagnostics.eventlog/9.0.10/system.diagnostics.eventlog.9.0.10.nupkg 199ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.security.cryptography.protecteddata/9.0.10/system.security.cryptography.protecteddata.9.0.10.nupkg 190ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.clientmodel/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.memory.data/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/azure.core/1.46.1/azure.core.1.46.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identity.client/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identity.client.extensions.msal/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/azure.core/1.46.1/azure.core.1.46.1.nupkg 46ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.clientmodel/index.json 111ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identity.client/index.json 122ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.memory.data/index.json 129ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/index.json 99ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identity.client.extensions.msal/index.json 135ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols/index.json 128ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/index.json 142ms
+info :   GET https://api.nuget.org/v3-flatcontainer/system.clientmodel/1.5.1/system.clientmodel.1.5.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identity.client/4.73.1/microsoft.identity.client.4.73.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/7.7.1/system.identitymodel.tokens.jwt.7.7.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identity.client.extensions.msal/4.73.1/microsoft.identity.client.extensions.msal.4.73.1.nupkg
+info :   CACHE https://api.nuget.org/v3-flatcontainer/system.text.encodings.web/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/7.7.1/microsoft.identitymodel.tokens.7.7.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols/7.7.1/microsoft.identitymodel.protocols.7.7.1.nupkg
+info :   GET https://api.nuget.org/v3-flatcontainer/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/system.clientmodel/1.5.1/system.clientmodel.1.5.1.nupkg 32ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.identitymodel.tokens.jwt/7.7.1/system.identitymodel.tokens.jwt.7.7.1.nupkg 27ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg 30ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identity.client.extensions.msal/4.73.1/microsoft.identity.client.extensions.msal.4.73.1.nupkg 32ms
+info :   OK https://api.nuget.org/v3-flatcontainer/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg 35ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols/7.7.1/microsoft.identitymodel.protocols.7.7.1.nupkg 45ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identity.client/4.73.1/microsoft.identity.client.4.73.1.nupkg 60ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/7.7.1/microsoft.identitymodel.tokens.7.7.1.nupkg 69ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/index.json 168ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/8.0.3/microsoft.extensions.logging.abstractions.8.0.3.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.extensions.logging.abstractions/8.0.3/microsoft.extensions.logging.abstractions.8.0.3.nupkg 134ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/index.json 106ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/7.7.1/microsoft.identitymodel.logging.7.7.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.logging/7.7.1/microsoft.identitymodel.logging.7.7.1.nupkg 23ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/index.json 48ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/7.7.1/microsoft.identitymodel.abstractions.7.7.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.abstractions/7.7.1/microsoft.identitymodel.abstractions.7.7.1.nupkg 35ms
+info : Installed Microsoft.Identity.Client.Extensions.Msal 4.73.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identity.client.extensions.msal\4.73.1 with content hash xDztAiV2F0wI0W8FLKv5cbaBefyLD6JVaAsvgSN7bjWNCzGYzHbcOEIP5s4TJXUpQzMfUyBsFl1mC6Zmgpz0PQ==.
+info : Installed System.ClientModel 1.5.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.clientmodel\1.5.1 with content hash k2jKSO0X45IqhVOT9iQB4xralNN9foRQsRvXBTyRpAVxyzCJlG895T9qYrQWbcJ6OQXxOouJQ37x5nZH5XKK+A==.
+info : Installed Microsoft.Data.SqlClient.SNI.runtime 6.0.2 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.data.sqlclient.sni.runtime\6.0.2 with content hash f+pRODTWX7Y67jXO3T5S2dIPZ9qMJNySjlZT/TKmWVNWe19N8jcWmHaqHnnchaq3gxEKv1SWVY5EFzOD06l41w==.
+info : Installed Microsoft.IdentityModel.Abstractions 7.7.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identitymodel.abstractions\7.7.1 with content hash S7sHg6gLg7oFqNGLwN1qSbJDI+QcRRj8SuJ1jHyCmKSipnF6ZQL+tFV2NzVfGj/xmGT9TykQdQiBN+p5Idl4TA==.
+info : Installed Microsoft.IdentityModel.Logging 7.7.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identitymodel.logging\7.7.1 with content hash BZNgSq/o8gsKExdYoBKPR65fdsxW0cTF8PsdqB8y011AGUJJW300S/ZIsEUD0+sOmGc003Gwv3FYbjrVjvsLNQ==.
+info : Installed Microsoft.IdentityModel.Protocols.OpenIdConnect 7.7.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identitymodel.protocols.openidconnect\7.7.1 with content hash yT2Hdj8LpPbcT9C9KlLVxXl09C8zjFaVSaApdOwuecMuoV4s6Sof/mnTDz/+F/lILPIBvrWugR9CC7iRVZgbfQ==.
+info : Installed Microsoft.IdentityModel.Protocols 7.7.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identitymodel.protocols\7.7.1 with content hash h+fHHBGokepmCX+QZXJk4Ij8OApCb2n2ktoDkNX5CXteXsOxTHMNgjPGpAwdJMFvAL7TtGarUnk3o97NmBq2QQ==.
+info : Installed Microsoft.IdentityModel.JsonWebTokens 7.7.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identitymodel.jsonwebtokens\7.7.1 with content hash 3Izi75UCUssvo8LPx3OVnEeZay58qaFicrtSnbtUt7q8qQi0gy46gh4V8VUTkMVMKXV6VMyjBVmeNNgeCUJuIw==.
+info : Installed System.IdentityModel.Tokens.Jwt 7.7.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.identitymodel.tokens.jwt\7.7.1 with content hash rQkO1YbAjLwnDJSMpRhRtrc6XwIcEOcUvoEcge+evurpzSZM3UNK+MZfD3sKyTlYsvknZ6eJjSBfnmXqwOsT9Q==.
+info : Installed System.Memory.Data 8.0.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.memory.data\8.0.1 with content hash BVYuec3jV23EMRDeR7Dr1/qhx7369dZzJ9IWy2xylvb4YfXsrUxspWc4UWYid/tj4zZK58uGZqn2WQiaDMhmAg==.
+info : Installed Microsoft.IdentityModel.Tokens 7.7.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identitymodel.tokens\7.7.1 with content hash fQ0VVCba75lknUHGldi3iTKAYUQqbzp1Un8+d9cm9nON0Gs8NAkXddNg8iaUB0qi/ybtAmNWizTR4avdkCJ9pQ==.
+info : Installed System.Configuration.ConfigurationManager 9.0.4 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.configuration.configurationmanager\9.0.4 with content hash dvjqKp+2LpGid6phzrdrS/2mmEPxFl3jE1+L7614q4ZChKbLJCpHXg6sBILlCCED1t//EE+un/UdAetzIMpqnw==.
+info : Installed Azure.Core 1.46.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\azure.core\1.46.1 with content hash iE5DPOlGsN5kCkF4gN+vasN1RihO0Ypie92oQ5tohQYiokmnrrhLnee+3zcE8n7vB6ZAzhPTfUGAEXX/qHGkYA==.
+info : Installed System.Security.Cryptography.Pkcs 9.0.4 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.security.cryptography.pkcs\9.0.4 with content hash cUFTcMlz/Qw9s90b2wnWSCvHdjv51Bau9FQqhsr4TlwSe1OX+7SoXUqphis5G74MLOvMOCghxPPlEqOdCrVVGA==.
+info : Installed Serilog.Sinks.MSSqlServer 9.0.3 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\serilog.sinks.mssqlserver\9.0.3 with content hash eUj3q4JJxedjOuK9M7cEhG4YHrUcbmvDnkp4ueAmLoM7g8KwoIScqK9DpYTbE8ikM8B5QQQkJrjre7B2bVXu7A==.
+info : Installed Microsoft.Identity.Client 4.73.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.identity.client\4.73.1 with content hash NnDLS8QwYqO5ZZecL2oioi1LUqjh5Ewk4bMLzbgiXJbQmZhDLtKwLxL3DpGMlQAJ2G4KgEnvGPKa+OOgffeJbw==.
+info : Installed Azure.Identity 1.14.2 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\azure.identity\1.14.2 with content hash YhNMwOTwT+I2wIcJKSdP0ADyB2aK+JaYWZxO8LSRDm5w77LFr0ykR9xmt2ZV5T1gaI7xU6iNFIh/yW1dAlpddQ==.
+info : Installed Azure.Core 1.47.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\azure.core\1.47.1 with content hash oPcncSsDHuxB8SC522z47xbp2+ttkcKv2YZ90KXhRKN0YQd2+7l1UURT9EBzUNEXtkLZUOAB5xbByMTrYRh3yA==.
+info : Installed Microsoft.Bcl.Cryptography 9.0.4 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.bcl.cryptography\9.0.4 with content hash YgZYAWzyNuPVtPq6WNm0bqOWNjYaWgl5mBWTGZyNoXitYBUYSp6iUB9AwK0V1mo793qRJUXz2t6UZrWITZSvuQ==.
+info : Installed Serilog 4.3.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\serilog\4.3.1 with content hash savYe7h5yRlkqBVOwP8cIRDOdqKiPmYCU4W87JH38sBmcKD5EBoXvQIw6bNEvZ/pTe1gsiye3VFCzBsoppGkXQ==.
+info : Installed System.Configuration.ConfigurationManager 9.0.10 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.configuration.configurationmanager\9.0.10 with content hash 5CBhl5dWmckKEtvk8F6GXtmHxNBoqAC8xILxIntNm7AzHiXQ09CXSLhncIJ/cQWaiNYzLjHZCgtMfx9tkCKHdA==.
+info : Installed System.Security.Cryptography.ProtectedData 9.0.10 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.security.cryptography.protecteddata\9.0.10 with content hash iC0InhfWdk0nHlbcTAAUyWt9X4+CsaZz9elQy0otFcsUkd/Wm+DmEwjqyH9PgFl1XcSowzhv67njCstABTc3Hw==.
+info : Installed System.Diagnostics.EventLog 9.0.10 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.diagnostics.eventlog\9.0.10 with content hash Jc+az1pTMujPLDn2j5eqSfzlO7j/T1K/LB7THxdfRWOxujE4zaitUqBs7sv1t6/xmmvpU6Xx3IofCs4owYH0yQ==.
+info : Installed Microsoft.Extensions.Logging.Abstractions 8.0.3 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.3 with content hash dL0QGToTxggRLMYY4ZYX5AMwBb+byQBd/5dMiZE07Nv73o6I5Are3C7eQTh7K2+A4ct0PVISSr7TZANbiNb2yQ==.
+info : Installed System.Text.Encodings.Web 7.0.0 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\system.text.encodings.web\7.0.0 with content hash OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==.
+info : Installed Microsoft.Data.SqlClient 6.1.1 from https://api.nuget.org/v3/index.json to C:\Users\Dell\.nuget\packages\microsoft.data.sqlclient\6.1.1 with content hash syGQmIUPAYYHAHyTD8FCkTNThpQWvoA7crnIQRMfp8dyB5A2cWU3fQexlRTFkVmV7S0TjVmthi0LJEFVjHo8AQ==.
+info :   CACHE https://api.nuget.org/v3/vulnerabilities/index.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2026.04.24.08.53.42/vulnerability.base.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2026.04.24.08.53.42/2026.04.24.14.53.43/vulnerability.update.json
+info : Package 'Serilog.Sinks.MSSqlServer' is compatible with all the specified frameworks in project 'D:\Inc\Presentation\Presentation.csproj'.
+info : PackageReference for package 'Serilog.Sinks.MSSqlServer' version '9.0.3' added to file 'D:\Inc\Presentation\Presentation.csproj'.
+info : Generating MSBuild file D:\Inc\Presentation\obj\Presentation.csproj.nuget.g.targets.
+info : Writing assets file to disk. Path: D:\Inc\Presentation\obj\project.assets.json
+log  : Restored D:\Inc\Presentation\Presentation.csproj (in 6.78 sec).
